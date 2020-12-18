@@ -32,7 +32,13 @@ class Student
   end
 
   def save
+    if self.id
+    else
+    end
 
+    sql =  <<-SQL
+
+    SQL
   end
 
   def self.create

@@ -56,7 +56,10 @@ class Student
 
   def self.find_by_name(name)
     sql =  <<-SQL
-      DROP TABLE IF EXISTS students
+      SELECT students.id, students.name, students.grade
+      FROM students
+      WHERE students.name = ?
+      LIMIT 1
     SQL
 
     DB[:conn].execute(sql, name)

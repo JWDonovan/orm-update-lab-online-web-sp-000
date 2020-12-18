@@ -35,11 +35,10 @@ class Student
     if self.id
       self.update
     else
+      sql =  <<-SQL
+
+      SQL
     end
-
-    sql =  <<-SQL
-
-    SQL
   end
 
   def self.create

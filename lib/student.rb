@@ -62,7 +62,8 @@ class Student
       LIMIT 1
     SQL
 
-    students = DB[:conn].execute(sql,name).collect do |student|
+    students = DB[:conn].execute(sql,name)
+    students.collect do |student|
       self.new_from_db(student)
     end.first
   end

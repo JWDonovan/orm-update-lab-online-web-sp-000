@@ -58,7 +58,7 @@ class Student
     sql = <<-SQL
       SELECT students.id, students.name, students.grade
       FROM students
-      WHERE name = ?
+      WHERE students.name = ?
       LIMIT 1
     SQL
 
